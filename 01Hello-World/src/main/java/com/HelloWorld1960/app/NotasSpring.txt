@@ -1,0 +1,11 @@
+Spring:
+Es un framework Open Source que facilita la creacion de aplicaciones Java EE(Enterprice Edition).
+Los patrondes de diseño que se pueden usar con este framework son:
+-Modelo Vista Controlador.
+-Data.
+-Inyeccion de dependencias.
+-Invercion de control.
+
+El uso de inyección de dependencias facilita la programación contra interfaz, permitiendo a los distintos componentes depender únicamente de interfaces y produciendo así un código menos acoplado. No solo eso, también permite implementar el patrón singleton de una forma extremadamente sencilla (por defecto, las dependencias que inyectamos son singletons).
+
+En general, Spring aumenta la productividad y reduce la fricción al ofrecernos abstracciones sobre implementaciones de tecnologías concretas. Un ejemplo claro es el de spring-data, que nos permite definir el acceso a base de datos con interfaces Java. Esto lo consigue parseando el nombre de los métodos y generando la consulta con la sintaxis específica para el driver que utilicemos. Por ejemplo, cambiar nuestra aplicación de MySQL a PostgreSQL es tan sencillo como cambiar el driver: Spring se encarga de la sintaxis de forma transparente.

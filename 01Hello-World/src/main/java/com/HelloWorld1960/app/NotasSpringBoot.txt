@@ -1,0 +1,21 @@
+Spring Boot:
+
+Spring Boot es una herramienta que elimina la mayor parte del trabajo de configurar las aplicaciones basadas en Spring.
+
+Por ejemplo, para construir una aplicacion con Spring se deben seguir estos pasos:
+1)Crear un proyecto Maven y descargar las dependencias.
+2)Desarrollar la aplicacion.
+3)Desplegar la aplicacion en un servidor.
+Pero en este proceso el paso dos es tarea del desarrollador, los pasos 1 y 3 estan orientado a infraestructura. El desarrollador no deberia estar eligiendo continuamente las dependencias y el servidor de despliegue.
+
+SpringBoot nace con la intención de simplificar los pasos 1 y 3 y que nos podamos centrar en el desarrollo de nuestra aplicación y esto lo logra gracias a dos grandes caracteristicas.
+
+1)Contenedor de aplicaciones integrado
+Spring Boot permite compilar nuestras aplicaciones Web como un archivo .jar que podemos ejecutar como una aplicación Java normal (como alternativa a un archivo .war, que desplegaríamos en un servidor de aplicaciones como Tomcat).
+
+Esto lo consigue integrando el servidor de aplicaciones en el propio .jar y levantándolo cuando arrancamos la aplicación. De esta forma, podemos distribuir nuestras aplicaciones de una forma mucho más sencilla, al poder configurar el servidor junto con la aplicación. Esto también es muy útil en arquitecturas de microservicios, puesto que permite distribuir nuestras aplicaciones como imágenes Docker que podemos escalar horizontalmente (algo muy complicado con un .war).
+
+2)Starters (Iniciadores)
+Spring Boot nos proporciona una serie de dependencias, llamadas starters, que podemos añadir a nuestro proyecto dependiendo de lo que necesitemos: crear un controlador REST, acceder a una base de datos usando JDBC, conectar con una cola de mensajes Apache ActiveMQ, etc.
+
+Una vez añadimos un starter, éste nos proporciona todas las dependencias que necesitamos, tanto de Spring como de terceros. Además, los starters vienen configurados con valores por defecto, que pretenden minimizar la necesidad de configuración a la hora de desarrollar. Un buen ejemplo es el de spring-boot-starter-actuator: una vez que añadimos la dependencia, nuestra aplicación empezará a generar métricas tanto de la JVM como de la aplicación en sí (latencias, errores, etc).
